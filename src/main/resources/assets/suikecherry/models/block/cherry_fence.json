@@ -1,0 +1,21 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"0": "suikecherry:blocks/cherry_planks",
+		"particle": "suikecherry:blocks/cherry_planks"
+	},
+	"elements": [
+		{
+			"from": [6, 0, 6],
+			"to": [10, 16, 10],
+			"faces": {
+				"north": {"uv": [6, 0, 10, 16], "texture": "#0"},
+				"east": {"uv": [6, 0, 10, 16], "texture": "#0"},
+				"south": {"uv": [6, 0, 10, 16], "texture": "#0"},
+				"west": {"uv": [6, 0, 10, 16], "texture": "#0"},
+				"up": {"uv": [6, 6, 10, 10], "texture": "#0", "cullface": "up"},
+				"down": {"uv": [6, 6, 10, 10], "texture": "#0", "cullface": "down"}
+			}
+		}
+	]
+}
