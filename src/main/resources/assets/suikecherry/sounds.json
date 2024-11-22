@@ -1,0 +1,97 @@
+{
+    "none": {
+        "sounds": [
+            "suikecherry:none"
+        ]
+    },
+    "axe.strip": {
+        "subtitle": "subtitles.item.axe.strip",
+        "sounds": [
+            "suikecherry:axe/strip1",
+            "suikecherry:axe/strip2",
+            "suikecherry:axe/strip3",
+            "suikecherry:axe/strip4"
+        ]
+    },
+    "block.cherrywood.place": {
+        "sounds": [
+            "suikecherry:cherry_wood/place1",
+            "suikecherry:cherry_wood/place2",
+            "suikecherry:cherry_wood/place3",
+            "suikecherry:cherry_wood/place4",
+            "suikecherry:cherry_wood/place5"
+        ]
+    },
+    "block.cherrywood.break": {
+        "sounds": [
+            "suikecherry:cherry_wood/break1",
+            "suikecherry:cherry_wood/break2",
+            "suikecherry:cherry_wood/break3",
+            "suikecherry:cherry_wood/break4",
+            "suikecherry:cherry_wood/break5"
+        ]
+    },
+    "block.cherryleaves.place": {
+        "sounds": [
+            "suikecherry:cherry_leaves/place1",
+            "suikecherry:cherry_leaves/place2",
+            "suikecherry:cherry_leaves/place3",
+            "suikecherry:cherry_leaves/place4",
+            "suikecherry:cherry_leaves/place5"
+        ]
+    },
+    "block.cherryleaves.break": {
+        "sounds": [
+            "suikecherry:cherry_leaves/break1",
+            "suikecherry:cherry_leaves/break2",
+            "suikecherry:cherry_leaves/break3",
+            "suikecherry:cherry_leaves/break4",
+            "suikecherry:cherry_leaves/break5"
+        ]
+    },
+    "block.cherrybutton.click": {
+        "subtitle": "subtitles.block.button.click",
+        "sounds": [
+            "suikecherry:cherry_button/cherry_button_click"
+        ]
+    },
+    "block.cherrybutton.restore": {
+        "subtitle": "subtitles.block.button.click",
+        "sounds": [
+            "suikecherry:cherry_button/cherry_button_restore"
+        ]
+    },
+    "music.overworld.cherry_grove": {
+        "sounds": [
+            {
+                "name": "suikecherry:music/bromeliad",
+                "stream": true,
+                "volume": 0.4,
+                "weight": 3
+            },
+            {
+                "name": "music/game/calm1",
+                "stream": true
+            },
+            {
+                "name": "music/game/calm2",
+                "stream": true
+            },
+            {
+                "name": "music/game/calm3",
+                "stream": true
+            },
+            {
+                "name": "suikecherry:music/echo_in_the_wind",
+                "stream": true,
+                "volume": 0.4,
+                "weight": 3
+            },
+            {
+                "name": "suikecherry:music/left_to_bloom",
+                "stream": true,
+                "volume": 0.4
+            }
+        ]
+    }
+}
