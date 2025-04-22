@@ -1,0 +1,29 @@
+{
+    "variants": {
+        "check_decay=true,decayable=true": [
+            { "model": "suikecherry:cherry_leaves" },
+            { "model": "suikecherry:cherry_leaves_2" },
+            { "model": "suikecherry:cherry_leaves_3" },
+            { "model": "suikecherry:cherry_leaves_4" }
+        ],
+        "check_decay=true,decayable=false": [
+            { "model": "suikecherry:cherry_leaves" },
+            { "model": "suikecherry:cherry_leaves_2" },
+            { "model": "suikecherry:cherry_leaves_3" },
+            { "model": "suikecherry:cherry_leaves_4" }
+        ],
+        "check_decay=false,decayable=true": [
+            { "model": "suikecherry:cherry_leaves" },
+            { "model": "suikecherry:cherry_leaves_2" },
+            { "model": "suikecherry:cherry_leaves_3" },
+            { "model": "suikecherry:cherry_leaves_4" }
+        ],
+        "check_decay=false,decayable=false": [
+            { "model": "suikecherry:cherry_leaves" },
+            { "model": "suikecherry:cherry_leaves_2" },
+            { "model": "suikecherry:cherry_leaves_3" },
+            { "model": "suikecherry:cherry_leaves_4" }
+        ]
+    }
+}
+  

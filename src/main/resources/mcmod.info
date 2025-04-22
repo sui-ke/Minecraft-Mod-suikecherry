@@ -1,0 +1,12 @@
+[
+  {
+    "modid": "suikecherry",
+    "name": "Cherry_on_1.12.2",
+    "version": "Bate-1.2.17",
+    "mcversion": "1.12.2",
+    "logoFile": "",
+    "url": "MC百科: https://www.mcmod.cn/class/16834.html",
+    "authorList": ["sui_ke"],
+    "description": "为1.12.2添加樱花；Add Cherry to 1.12.2。"
+  }
+]

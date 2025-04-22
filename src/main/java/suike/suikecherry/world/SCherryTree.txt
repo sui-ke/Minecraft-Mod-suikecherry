@@ -1,0 +1,20 @@
+package ;
+
+import java.util.Random;
+
+import suike.suikecherry.world.CherryTree;
+
+import net.minecraft.world.World;
+import net.minecraft.util.math.BlockPos;
+
+//修改樱花树结构类示例
+public class SCherryTree extends CherryTree  {
+    public SCherryTree() {
+        this.setCherryTree();
+    }
+
+    @Override
+    public void generateCherryTree(World world, BlockPos pos, Random random) {
+        //自定义樱花树
+    }
+}

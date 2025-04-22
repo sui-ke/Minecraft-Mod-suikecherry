@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "axis=1,color=pink,level=1": { "model": "suikecherry:pink_petals_1" },
+        "axis=1,color=pink,level=2": { "model": "suikecherry:pink_petals_2" },
+        "axis=1,color=pink,level=3": { "model": "suikecherry:pink_petals_3" },
+        "axis=1,color=pink,level=4": { "model": "suikecherry:pink_petals_4" },
+        "axis=2,color=pink,level=1": { "model": "suikecherry:pink_petals_1" , "y": 90 },
+        "axis=2,color=pink,level=2": { "model": "suikecherry:pink_petals_2" , "y": 90 },
+        "axis=2,color=pink,level=3": { "model": "suikecherry:pink_petals_3" , "y": 90 },
+        "axis=2,color=pink,level=4": { "model": "suikecherry:pink_petals_4" , "y": 90 },
+        "axis=3,color=pink,level=1": { "model": "suikecherry:pink_petals_1" , "y": 180 },
+        "axis=3,color=pink,level=2": { "model": "suikecherry:pink_petals_2" , "y": 180 },
+        "axis=3,color=pink,level=3": { "model": "suikecherry:pink_petals_3" , "y": 180 },
+        "axis=3,color=pink,level=4": { "model": "suikecherry:pink_petals_4" , "y": 180 },
+        "axis=4,color=pink,level=1": { "model": "suikecherry:pink_petals_1" , "y": 270 },
+        "axis=4,color=pink,level=2": { "model": "suikecherry:pink_petals_2" , "y": 270 },
+        "axis=4,color=pink,level=3": { "model": "suikecherry:pink_petals_3" , "y": 270 },
+        "axis=4,color=pink,level=4": { "model": "suikecherry:pink_petals_4" , "y": 270 }
+    }
+}
