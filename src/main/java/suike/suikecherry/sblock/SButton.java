@@ -12,13 +12,14 @@ import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import suike.suikecherry.suikecherry.Tags;
 
 //按钮类
 public class SButton extends BlockButton implements SBlock {
     public SButton(String name) {
         /*创建方块实例*/super(false);
         /*设置物品名*/setRegistryName(name);
-        /*设置物品名key*/setUnlocalizedName(name + "_" + SuiKe.MODID);
+        /*设置物品名key*/setTranslationKey(name + "_" + Tags.MOD_ID);
         /*设置创造模式物品栏*/setCreativeTab(CreativeTabs.REDSTONE);
         /*设置硬度*/setHardness(0.5F);
         /*设置抗爆性*/setResistance(0.5F);

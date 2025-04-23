@@ -23,12 +23,13 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Enchantments;
 import net.minecraft.enchantment.EnchantmentHelper;
+import suike.suikecherry.suikecherry.Tags;
 
 //原木类
 public class SLog extends BlockLog implements SBlock {
     public SLog(String name) {
         /*设置物品名*/setRegistryName(name);
-        /*设置物品名key*/setUnlocalizedName(name + "_" + SuiKe.MODID);
+        /*设置物品名key*/setTranslationKey(name + "_" + Tags.MOD_ID);
         /*设置创造模式物品栏*/setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
         /*设置硬度*/setHardness(2.0F);
         /*设置抗爆性*/setResistance(2.0F);

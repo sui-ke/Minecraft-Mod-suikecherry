@@ -8,13 +8,14 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.creativetab.CreativeTabs;
+import suike.suikecherry.suikecherry.Tags;
 
 //楼梯类
 public class SStairs extends BlockStairs implements SBlock {
     public SStairs(String name) {
         /*创建方块实例*/super(BlockBase.CHERRY_PLANKS.getDefaultState());
         /*设置物品名*/setRegistryName(name);
-        /*设置物品名key*/setUnlocalizedName(name + "_" + SuiKe.MODID);
+        /*设置物品名key*/setTranslationKey(name + "_" + Tags.MOD_ID);
         /*设置创造模式物品栏*/setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
         /*设置硬度*/setHardness(2.0F);
         /*设置抗爆性*/setResistance(5.0F);

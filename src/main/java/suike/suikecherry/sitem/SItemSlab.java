@@ -19,12 +19,13 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import suike.suikecherry.suikecherry.Tags;
 
 //台阶物品类
 public class SItemSlab extends Item implements SItem {
     public SItemSlab(String name, CreativeTabs tabs) {
         /*设置物品名*/setRegistryName(name);
-        /*设置物品名key*/setUnlocalizedName(name + "_" + SuiKe.MODID);
+        /*设置物品名key*/setTranslationKey(name + "_" + Tags.MOD_ID);
         /*设置创造模式物品栏*/setCreativeTab(tabs);
 
         /*添加到ITEMS列表*/ItemBase.ITEMS.add(this);

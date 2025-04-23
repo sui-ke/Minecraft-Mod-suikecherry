@@ -22,12 +22,13 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.network.play.server.SPacketTitle;
+import suike.suikecherry.suikecherry.Tags;
 
 //悬挂告示牌物品
 public class SItemHangingSign extends Item implements SItem {
     public SItemHangingSign(String name, CreativeTabs tabs) {
         /*设置物品名*/setRegistryName(name);
-        /*设置物品名key*/setUnlocalizedName(name + "_" + SuiKe.MODID);
+        /*设置物品名key*/setTranslationKey(name + "_" + Tags.MOD_ID);
         /*设置堆叠数量*/setMaxStackSize(16);
         /*设置创造模式物品栏*/setCreativeTab(tabs);
 

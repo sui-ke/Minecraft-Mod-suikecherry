@@ -9,13 +9,14 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.block.BlockPressurePlate;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import suike.suikecherry.suikecherry.Tags;
 
 //压力板类
 public class SPressurePlate extends BlockPressurePlate implements SBlock {
     public SPressurePlate(String name) {
         /*创建方块实例*/super(Material.WOOD, BlockPressurePlate.Sensitivity.EVERYTHING);
         /*设置物品名*/setRegistryName(name);
-        /*设置物品名key*/setUnlocalizedName(name + "_" + SuiKe.MODID);
+        /*设置物品名key*/setTranslationKey(name + "_" + Tags.MOD_ID);
         /*设置创造模式物品栏*/setCreativeTab(CreativeTabs.REDSTONE);
         /*设置硬度*/setHardness(0.5F);
         /*设置抗爆性*/setResistance(0.5F);

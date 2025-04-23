@@ -29,6 +29,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import suike.suikecherry.suikecherry.Tags;
 
 @EventBusSubscriber
 public class BlockBase extends Block implements SBlock {
@@ -63,7 +64,7 @@ public class BlockBase extends Block implements SBlock {
     public BlockBase(String name, CreativeTabs tabs) {
         /*创建方块实例*/super(Material.WOOD);
         /*设置物品名*/setRegistryName(name);
-        /*设置物品名key*/setUnlocalizedName(name + "_" + SuiKe.MODID);
+        /*设置物品名key*/setTranslationKey(name + "_" +  Tags.MOD_ID);
         /*设置创造模式物品栏*/setCreativeTab(tabs);
         /*设置硬度*/setHardness(2.0F);
         /*设置抗爆性*/setResistance(5.0F);

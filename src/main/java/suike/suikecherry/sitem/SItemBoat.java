@@ -17,12 +17,13 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import suike.suikecherry.suikecherry.Tags;
 
 //船物品
 public class SItemBoat extends Item implements SItem {
     public SItemBoat(String name, CreativeTabs tabs) {
         /*设置物品名*/setRegistryName(name);
-        /*设置物品名key*/setUnlocalizedName(name + "_" + SuiKe.MODID);
+        /*设置物品名key*/setTranslationKey(name + "_" + Tags.MOD_ID);
         /*设置堆叠数量*/setMaxStackSize(1);
         /*设置创造模式物品栏*/setCreativeTab(tabs);
 

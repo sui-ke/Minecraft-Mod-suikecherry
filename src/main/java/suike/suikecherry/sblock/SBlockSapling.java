@@ -4,6 +4,7 @@ import java.util.Random;
 
 import suike.suikecherry.SuiKe;
 import suike.suikecherry.sitem.ItemBase;
+import suike.suikecherry.suikecherry.Tags;
 import suike.suikecherry.world.CherryTree;
 import suike.suikecherry.sound.Sound;
 import suike.suikecherry.sound.SoundTypeLeaves;
@@ -22,7 +23,7 @@ public class SBlockSapling extends BlockSapling implements SBlock {
     public SBlockSapling(String name) {
         /*创建方块实例*/super();
         /*设置物品名*/setRegistryName(name);
-        /*设置物品名key*/setUnlocalizedName(name + "_" + SuiKe.MODID);
+        /*设置物品名key*/setTranslationKey(name + "_" +  Tags.MOD_ID);
         /*设置不透明度*/setLightOpacity(0);
         /*设置声音*/setSoundType(new SoundTypeLeaves());
 

@@ -31,12 +31,13 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.creativetab.CreativeTabs;
+import suike.suikecherry.suikecherry.Tags;
 
 //树叶类
 public class SLeaves extends BlockLeaves implements SBlock {
     public SLeaves(String name) {
         /*设置物品名*/setRegistryName(name);
-        /*设置物品名key*/setUnlocalizedName(name + "_" + SuiKe.MODID);
+        /*设置物品名key*/setTranslationKey(name + "_" + Tags.MOD_ID);
         /*设置创造模式物品栏*/setCreativeTab(CreativeTabs.DECORATIONS);
         /*设置硬度*/setHardness(0.2F);
         /*设置抗爆性*/setResistance(0.2F);

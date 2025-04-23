@@ -19,8 +19,9 @@ import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.event.world.ChunkEvent;
+import suike.suikecherry.suikecherry.Tags;
 
-@Mod.EventBusSubscriber(modid = SuiKe.MODID)
+@Mod.EventBusSubscriber(modid =  Tags.MOD_ID)
 public class WorldGenerator {
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void onChunkLoad(ChunkEvent.Load event) {

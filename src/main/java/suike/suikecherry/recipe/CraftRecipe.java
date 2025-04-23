@@ -19,6 +19,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.oredict.OreIngredient;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistryModifiable;
+import suike.suikecherry.suikecherry.Tags;
 
 public class CraftRecipe {
     public static void register() {
@@ -28,8 +29,8 @@ public class CraftRecipe {
         if (!ConfigValue.spawnCherryBiome && !ConfigValue.spawnCherryTree) {
             OreIngredient treeSapling = new OreIngredient("treeSapling");
             /*樱花树苗*/GameRegistry.addShapedRecipe(
-                new ResourceLocation(SuiKe.MODID, "cherry_sapling"),//配方标识符
-                new ResourceLocation(SuiKe.MODID),//分组名
+                new ResourceLocation(Tags.MOD_ID, "cherry_sapling"),//配方标识符
+                new ResourceLocation( Tags.MOD_ID),//分组名
                 new ItemStack(ItemBase.CHERRY_SAPLING),
                 "AB",
                 'A', treeSapling,
@@ -39,16 +40,16 @@ public class CraftRecipe {
 
 /*樱花木板*/OreIngredient logCherry = new OreIngredient("logCherry");
         GameRegistry.addShapedRecipe(
-            new ResourceLocation(SuiKe.MODID, "cherry_planks"), //配方标识符
-            new ResourceLocation(SuiKe.MODID), //分组名
+            new ResourceLocation( Tags.MOD_ID, "cherry_planks"), //配方标识符
+            new ResourceLocation( Tags.MOD_ID), //分组名
             new ItemStack(BlockBase.CHERRY_PLANKS, 4),
             "A",
             'A', logCherry
         );
 
 /*樱花木头*/GameRegistry.addShapedRecipe(
-            new ResourceLocation(SuiKe.MODID, "cherry_wood"),
-            new ResourceLocation(SuiKe.MODID),
+            new ResourceLocation( Tags.MOD_ID, "cherry_wood"),
+            new ResourceLocation( Tags.MOD_ID),
             new ItemStack(BlockBase.CHERRY_WOOD, 3),
             "AA",
             "AA",
@@ -56,8 +57,8 @@ public class CraftRecipe {
         );
 
 /*樱花去皮木头*/GameRegistry.addShapedRecipe(
-            new ResourceLocation(SuiKe.MODID, "cherry_stripped_wood"),
-            new ResourceLocation(SuiKe.MODID),
+            new ResourceLocation( Tags.MOD_ID, "cherry_stripped_wood"),
+            new ResourceLocation( Tags.MOD_ID),
             new ItemStack(BlockBase.CHERRY_STRIPPED_WOOD, 3),
             "AA",
             "AA",
@@ -65,8 +66,8 @@ public class CraftRecipe {
         );
 
 /*樱花楼梯*/GameRegistry.addShapedRecipe(
-            new ResourceLocation(SuiKe.MODID, "cherry_stairs"),
-            new ResourceLocation(SuiKe.MODID),
+            new ResourceLocation( Tags.MOD_ID, "cherry_stairs"),
+            new ResourceLocation( Tags.MOD_ID),
             new ItemStack(BlockBase.CHERRY_STAIRS, 4),
             "ANN",
             "AAN",
@@ -76,16 +77,16 @@ public class CraftRecipe {
         );
 
 /*樱花台阶*/GameRegistry.addShapedRecipe(
-            new ResourceLocation(SuiKe.MODID, "cherry_slab"),
-            new ResourceLocation(SuiKe.MODID),
+            new ResourceLocation( Tags.MOD_ID, "cherry_slab"),
+            new ResourceLocation( Tags.MOD_ID),
             new ItemStack(ItemBase.CHERRY_SLAB, 6),
             "AAA",
             'A', new ItemStack(BlockBase.CHERRY_PLANKS)
         );
 
 /*樱花活板门*/GameRegistry.addShapedRecipe(
-            new ResourceLocation(SuiKe.MODID, "cherry_trapdoor"),
-            new ResourceLocation(SuiKe.MODID),
+            new ResourceLocation( Tags.MOD_ID, "cherry_trapdoor"),
+            new ResourceLocation( Tags.MOD_ID),
             new ItemStack(BlockBase.CHERRY_TRAPDOOR, 2),
             "AAA",
             "AAA",
@@ -93,8 +94,8 @@ public class CraftRecipe {
         );
 
 /*樱花木栅栏*/GameRegistry.addShapedRecipe(
-            new ResourceLocation(SuiKe.MODID, "cherry_fence"),
-            new ResourceLocation(SuiKe.MODID),
+            new ResourceLocation( Tags.MOD_ID, "cherry_fence"),
+            new ResourceLocation( Tags.MOD_ID),
             new ItemStack(BlockBase.CHERRY_FENCE, 3),
             "ABA",
             "ABA",
@@ -103,8 +104,8 @@ public class CraftRecipe {
         );
 
 /*樱花木栅栏*/GameRegistry.addShapedRecipe(
-            new ResourceLocation(SuiKe.MODID, "cherry_fence_gate"),
-            new ResourceLocation(SuiKe.MODID),
+            new ResourceLocation( Tags.MOD_ID, "cherry_fence_gate"),
+            new ResourceLocation( Tags.MOD_ID),
             new ItemStack(BlockBase.CHERRY_FENCEGATE),
             "BAB",
             "BAB",
@@ -113,8 +114,8 @@ public class CraftRecipe {
         );
 
 /*樱花木门*/GameRegistry.addShapedRecipe(
-            new ResourceLocation(SuiKe.MODID, "cherry_door"),
-            new ResourceLocation(SuiKe.MODID),
+            new ResourceLocation( Tags.MOD_ID, "cherry_door"),
+            new ResourceLocation( Tags.MOD_ID),
             new ItemStack(ItemBase.CHERRY_DOOR, 3),
             "AA",
             "AA",
@@ -123,8 +124,8 @@ public class CraftRecipe {
         );
 
 /*樱花木船*/GameRegistry.addShapedRecipe(
-            new ResourceLocation(SuiKe.MODID, "cherry_boat"),
-            new ResourceLocation(SuiKe.MODID),
+            new ResourceLocation( Tags.MOD_ID, "cherry_boat"),
+            new ResourceLocation( Tags.MOD_ID),
             new ItemStack(ItemBase.CHERRY_BOAT),
             "ANA",
             "AAA",
@@ -133,32 +134,32 @@ public class CraftRecipe {
         );
 
 /*樱花木按钮*/GameRegistry.addShapedRecipe(
-            new ResourceLocation(SuiKe.MODID, "cherry_button"),
-            new ResourceLocation(SuiKe.MODID),
+            new ResourceLocation( Tags.MOD_ID, "cherry_button"),
+            new ResourceLocation( Tags.MOD_ID),
             new ItemStack(BlockBase.CHERRY_BUTTON, 1),
             "A",
             'A', new ItemStack(BlockBase.CHERRY_PLANKS)
         );
 
 /*樱花木压力板*/GameRegistry.addShapedRecipe(
-            new ResourceLocation(SuiKe.MODID, "cherry_pressure_plate"),
-            new ResourceLocation(SuiKe.MODID),
+            new ResourceLocation( Tags.MOD_ID, "cherry_pressure_plate"),
+            new ResourceLocation( Tags.MOD_ID),
             new ItemStack(BlockBase.CHERRY_PRESSURE_PLATE, 1),
             "AA",
             'A', new ItemStack(BlockBase.CHERRY_PLANKS)
         );
 
 /*粉红色染料*/GameRegistry.addShapedRecipe(
-            new ResourceLocation(SuiKe.MODID, "pink_petals"),
-            new ResourceLocation(SuiKe.MODID),
+            new ResourceLocation( Tags.MOD_ID, "pink_petals"),
+            new ResourceLocation( Tags.MOD_ID),
             new ItemStack(Item.getByNameOrId("minecraft:dye"), 1, 9),
             "A",
             'A', new ItemStack(ItemBase.PINK_PETALS)
         );
 
 /*樱花木告示牌*/GameRegistry.addShapedRecipe(
-            new ResourceLocation(SuiKe.MODID, "cherry_sign"),
-            new ResourceLocation(SuiKe.MODID),
+            new ResourceLocation( Tags.MOD_ID, "cherry_sign"),
+            new ResourceLocation( Tags.MOD_ID),
             new ItemStack(ItemBase.CHERRY_SIGN, 3),
             "AAA",
             "AAA",
@@ -171,8 +172,8 @@ public class CraftRecipe {
 /*樱花木悬挂式告示牌*/
         Item item = Examine.FuturemcID ? Item.getByNameOrId("futuremc:chain") : Items.IRON_INGOT;
         GameRegistry.addShapedRecipe(
-            new ResourceLocation(SuiKe.MODID, "cherry_hanging_sign"),
-            new ResourceLocation(SuiKe.MODID),
+            new ResourceLocation( Tags.MOD_ID, "cherry_hanging_sign"),
+            new ResourceLocation( Tags.MOD_ID),
             new ItemStack(ItemBase.CHERRY_HANGING_SIGN, 6),
             "ACA",
             "BBB",
@@ -183,8 +184,8 @@ public class CraftRecipe {
         );
 
 /*阳光传感器*/GameRegistry.addShapedRecipe(
-            new ResourceLocation(SuiKe.MODID, "daylight_detector"),
-            new ResourceLocation(SuiKe.MODID),
+            new ResourceLocation( Tags.MOD_ID, "daylight_detector"),
+            new ResourceLocation( Tags.MOD_ID),
             new ItemStack(Item.getByNameOrId("minecraft:daylight_detector")),
             "AAA",
             "BBB",

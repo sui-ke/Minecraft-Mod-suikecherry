@@ -31,12 +31,13 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.world.World;
 import net.minecraft.world.IBlockAccess;
+import suike.suikecherry.suikecherry.Tags;
 
 //落英类
 public class SBlockPetals extends BlockCarpet {
     public SBlockPetals(String name) {
         /*设置物品名*/setRegistryName(name);
-        /*设置物品名key*/setUnlocalizedName(name + "_" + SuiKe.MODID);
+        /*设置物品名key*/setTranslationKey(name + "_" + Tags.MOD_ID);
         /*设置硬度*/setHardness(0.0F);
         /*设置抗爆性*/setResistance(0.0F);
         /*设置不透明度*/setLightOpacity(0);

@@ -9,6 +9,7 @@ import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.util.ResourceLocation;
 
 import net.minecraftforge.fml.client.registry.IRenderFactory;
+import suike.suikecherry.suikecherry.Tags;
 
 //渲染类
 public class CherryBoatRender {
@@ -26,7 +27,7 @@ public class CherryBoatRender {
 
         @Override
         protected ResourceLocation getEntityTexture(EntityBoat boat) {
-            return new ResourceLocation(SuiKe.MODID, "textures/entity/cherry_boat.png");
+            return new ResourceLocation(Tags.MOD_ID, "textures/entity/cherry_boat.png");
         }
     }
 }

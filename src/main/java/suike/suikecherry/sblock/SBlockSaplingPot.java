@@ -18,12 +18,13 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.entity.player.EntityPlayer;
+import suike.suikecherry.suikecherry.Tags;
 
 //树苗盆栽类
 public class SBlockSaplingPot extends BlockFlowerPot {
     public SBlockSaplingPot(String name) {
         /*设置物品名*/setRegistryName(name);
-        /*设置物品名key*/setUnlocalizedName(name + "_" + SuiKe.MODID);
+        /*设置物品名key*/setTranslationKey(name + "_" +  Tags.MOD_ID);
         /*设置不透明度*/setLightOpacity(0);
 
         /*添加到BLOCKS列表*/BlockBase.BLOCKS.add(this);

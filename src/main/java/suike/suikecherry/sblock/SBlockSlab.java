@@ -1,24 +1,17 @@
 package suike.suikecherry.sblock;
 
-import java.lang.reflect.Field;
-
-import suike.suikecherry.SuiKe;
-import suike.suikecherry.sitem.ItemBase;
-import suike.suikecherry.sound.Sound;
 import suike.suikecherry.sound.SoundTypeWood;
 
+import suike.suikecherry.suikecherry.Tags;
 import thedarkcolour.futuremc.block.villagepillage.LanternBlock;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
-import net.minecraft.block.BlockSlab.EnumBlockHalf;
-import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.world.World;
 import net.minecraft.world.IBlockAccess;
@@ -34,7 +27,7 @@ public class SBlockSlab extends BlockSlab implements SBlock {
     public SBlockSlab(String name, boolean isDouble) {
         /*创建方块实例*/super(Material.WOOD);
         /*设置物品名*/setRegistryName(name);
-        /*设置物品名key*/setUnlocalizedName(name + "_" + SuiKe.MODID);
+        /*设置物品名key*/setTranslationKey(name + "_" + Tags.MOD_ID);
         /*设置硬度*/setHardness(2.0F);
         /*设置抗爆性*/setResistance(3.0F);
         /*设置挖掘等级*/setHarvestLevel("axe", 0);
@@ -102,9 +95,8 @@ public class SBlockSlab extends BlockSlab implements SBlock {
             return "default";
         }
     }
-    @Override
-    public String getUnlocalizedName(int meta) {
-        return super.getUnlocalizedName();
+    public String setTranslationKey(int meta) {
+        return super.setTranslationKey();
     }
 
 //获取物品&掉落物

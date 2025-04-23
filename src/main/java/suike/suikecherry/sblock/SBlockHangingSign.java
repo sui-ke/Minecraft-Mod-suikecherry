@@ -27,13 +27,14 @@ import net.minecraft.world.World;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import suike.suikecherry.suikecherry.Tags;
 
 //悬挂告示牌类
 public class SBlockHangingSign extends Block implements SBlock {
     public SBlockHangingSign(String name, boolean inWall) {
         super(Material.WOOD);
         /*设置物品名*/setRegistryName(name);
-        /*设置物品名key*/setUnlocalizedName(name + "_" + SuiKe.MODID);
+        /*设置物品名key*/setTranslationKey(name + "_" + Tags.MOD_ID);
         /*设置硬度*/setHardness(1.0F);
         /*设置抗爆性*/setResistance(1.0F);
         /*设置挖掘等级*/setHarvestLevel("axe", 0);

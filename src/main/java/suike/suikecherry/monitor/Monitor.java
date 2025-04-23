@@ -7,6 +7,7 @@ import suike.suikecherry.sitem.*;
 import suike.suikecherry.sblock.*;
 import suike.suikecherry.sentity.*;
 import suike.suikecherry.sound.Sound;
+import suike.suikecherry.suikecherry.Tags;
 import suike.suikecherry.world.CherryTree;
 import suike.suikecherry.world.CherryBiome;
 
@@ -33,7 +34,7 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BlockEvent;
 
-@Mod.EventBusSubscriber(modid = SuiKe.MODID)
+@Mod.EventBusSubscriber(modid = Tags.MOD_ID)
 public class Monitor {
 //方块放置触发器
     @SubscribeEvent(priority = EventPriority.HIGH)

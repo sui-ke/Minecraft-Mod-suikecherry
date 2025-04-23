@@ -17,6 +17,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import suike.suikecherry.suikecherry.Tags;
 
 @EventBusSubscriber
 public class ItemBase extends Item implements SItem {
@@ -35,7 +36,7 @@ public class ItemBase extends Item implements SItem {
 //构造函数
     public ItemBase(String name, CreativeTabs tabs) {
         /*设置物品名*/setRegistryName(name);
-        /*设置物品名key*/setUnlocalizedName(name + "_" + SuiKe.MODID);
+        /*设置物品名key*/setTranslationKey(name + "_" + Tags.MOD_ID);
         /*设置创造模式物品栏*/setCreativeTab(tabs);
 
         /*添加到ITEMS列表*/ITEMS.add(this);

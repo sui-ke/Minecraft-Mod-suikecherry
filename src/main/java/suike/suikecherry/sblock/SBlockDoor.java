@@ -14,13 +14,14 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import suike.suikecherry.suikecherry.Tags;
 
 //门类
 public class SBlockDoor extends BlockDoor implements SBlock {
     public SBlockDoor(String name) {
         /*创建方块实例*/super(Material.WOOD);
         /*设置物品名*/setRegistryName(name);
-        /*设置物品名key*/setUnlocalizedName(name + "_" + SuiKe.MODID);
+        /*设置物品名key*/setTranslationKey(name + "_" + Tags.MOD_ID);
         /*设置硬度*/setHardness(3.0F);
         /*设置抗爆性*/setResistance(3.0F);
         /*设置挖掘等级*/setHarvestLevel("axe", 0);

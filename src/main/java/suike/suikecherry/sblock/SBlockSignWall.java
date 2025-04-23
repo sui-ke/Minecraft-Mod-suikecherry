@@ -24,13 +24,14 @@ import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.entity.Entity;
+import suike.suikecherry.suikecherry.Tags;
 
 //墙上的告示牌类
 public class SBlockSignWall extends Block implements SBlock {
     public SBlockSignWall(String name) {
         super(Material.WOOD);
         /*设置物品名*/setRegistryName(name);
-        /*设置物品名key*/setUnlocalizedName(name + "_" + SuiKe.MODID);
+        /*设置物品名key*/setTranslationKey(name + "_" + Tags.MOD_ID);
         /*设置硬度*/setHardness(1.0F);
         /*设置抗爆性*/setResistance(1.0F);
         /*设置挖掘等级*/setHarvestLevel("axe", 0);

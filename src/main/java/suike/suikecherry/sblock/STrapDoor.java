@@ -9,13 +9,14 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.block.BlockTrapDoor;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import suike.suikecherry.suikecherry.Tags;
 
 //活板门类
 public class STrapDoor extends BlockTrapDoor implements SBlock {
     public STrapDoor(String name) {
         /*创建方块实例*/super(Material.WOOD);
         /*设置物品名*/setRegistryName(name);
-        /*设置物品名key*/setUnlocalizedName(name + "_" + SuiKe.MODID);
+        /*设置物品名key*/setTranslationKey(name + "_" + Tags.MOD_ID);
         /*设置创造模式物品栏*/setCreativeTab(CreativeTabs.REDSTONE);
         /*设置硬度*/setHardness(3.0F);
         /*设置抗爆性*/setResistance(3.0F);

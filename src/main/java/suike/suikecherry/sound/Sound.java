@@ -9,14 +9,15 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.PositionedSoundRecord;
+import suike.suikecherry.suikecherry.Tags;
 
 public class Sound {
     //播放音效方法
     public static void playSound(World world, BlockPos pos, String soundName) {
-        playSound(world, pos, SuiKe.MODID, soundName, 1.0F, 1.0F);
+        playSound(world, pos, Tags.MOD_ID, soundName, 1.0F, 1.0F);
     }
     public static void playSound(World world, BlockPos pos, String soundName, float a, float b) {
-        playSound(world, pos, SuiKe.MODID, soundName, a, b);
+        playSound(world, pos, Tags.MOD_ID, soundName, a, b);
     }
     public static void playSound(World world, BlockPos pos, String modId, String soundName) {
         playSound(world, pos, modId, soundName, 1.0F, 1.0F);
