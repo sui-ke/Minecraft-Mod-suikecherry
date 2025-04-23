@@ -1,7 +1,0 @@
-{
-    "parent": "block/door_top",
-    "textures": {
-        "bottom": "suikecherry:blocks/cherry_door_bottom",
-        "top": "suikecherry:blocks/cherry_door_top"
-    }
-}

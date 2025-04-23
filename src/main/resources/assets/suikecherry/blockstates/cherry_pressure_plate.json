@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "powered=false": { "model": "suikecherry:cherry_pressure_plate_up" },
-        "powered=true": { "model": "suikecherry:cherry_pressure_plate_down" }
-    }
-}

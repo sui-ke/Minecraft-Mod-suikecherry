@@ -1,7 +1,0 @@
-{
-    "parent": "block/cube_column",
-    "textures": {
-        "end": "suikecherry:blocks/cherry_log_top",
-        "side": "suikecherry:blocks/cherry_log"
-    }
-}

@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "half=top,variant=default": { "model": "suikecherry:cherry_planks" },
-        "half=bottom,variant=default": { "model": "suikecherry:cherry_planks" }
-    }
-}

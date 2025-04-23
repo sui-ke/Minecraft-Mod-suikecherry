@@ -1,7 +1,6 @@
 {
-    "pack": {
-        "description": "suikecherry",
-        "pack_format": 3,
-        "_comment": ""
-    }
+	"pack": {
+		"description": "${mod_name} Resources",
+		"pack_format": 3
+	}
 }

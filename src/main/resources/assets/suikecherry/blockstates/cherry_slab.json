@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "half=top,variant=default": { "model": "suikecherry:cherry_slab_top" },
-        "half=bottom,variant=default": { "model": "suikecherry:cherry_slab" }
-    }
-}
