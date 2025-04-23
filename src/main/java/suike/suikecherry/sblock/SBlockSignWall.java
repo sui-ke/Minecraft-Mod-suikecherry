@@ -56,7 +56,7 @@ public class SBlockSignWall extends Block implements SBlock {
     }
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return this.getDefaultState().withProperty(FACING, EnumFacing.getFront(meta & 7));
+        return this.getDefaultState().withProperty(FACING, EnumFacing.byIndex(meta & 7));
     }
     @Override
     public int getMetaFromState(IBlockState state) {

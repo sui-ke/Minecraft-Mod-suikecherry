@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "suikecherry:cherry_hanging_sign" },
+        "facing=south": { "model": "suikecherry:cherry_hanging_sign" },
+        "facing=east":  { "model": "suikecherry:cherry_hanging_sign", "y": 90 },
+        "facing=west":  { "model": "suikecherry:cherry_hanging_sign", "y": 90  }
+    }
+}

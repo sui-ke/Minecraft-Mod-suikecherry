@@ -95,8 +95,9 @@ public class SBlockSlab extends BlockSlab implements SBlock {
             return "default";
         }
     }
-    public String setTranslationKey(int meta) {
-        return super.setTranslationKey();
+    @Override
+    public String getTranslationKey(int meta) {
+        return super.getTranslationKey();
     }
 
 //获取物品&掉落物
