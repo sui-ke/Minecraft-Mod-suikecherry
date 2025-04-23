@@ -7,38 +7,46 @@ import suike.suikecherry.expand.Examine;
 import suike.suikecherry.expand.exnihilocreatio.ExNihiloCreatioExpand;
 
 import net.minecraft.client.Minecraft;
-
+import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.common.Loader;
 
 public class Config {
     public static File configFile;
     public static File configFileCopy;
     public static File 无中生有configFile;
-    //获取和读取配置文件
+
+    // 获取和读取配置文件
     public static void config() {
-        File config;
-        //获取 Minecraft/config/suike 目录
+        File configDir;
+
+        // 根据运行环境（服务端/客户端）选择正确的配置目录
         if (SuiKe.server) {
-            config = FMLCommonHandler.instance().getMinecraftServerInstance().getDataDirectory();
+            // 服务端：使用服务器数据目录
+            MinecraftServer server = FMLCommonHandler.instance().getMinecraftServerInstance();
+            configDir = server.getDataDirectory(); // 返回服务端根目录（如 ./world/）
         } else {
-            config = Minecraft.getMinecraft().mcDataDir;
+            // 客户端：使用 Minecraft 游戏目录
+            configDir = Minecraft.getMinecraft().gameDir; // 返回 .minecraft/ 目录
         }
 
-        configFile = new File(config, "config/sui_ke/cherry/Cherry.cfg");
-        configFileCopy = new File(config, "config/sui_ke/cherry/CherryCopy.cfg");
-        无中生有configFile = new File(config, "config/exnihilocreatio");
+        // 初始化配置文件路径
+        configFile = new File(configDir, "config/sui_ke/cherry/Cherry.cfg");
+        configFileCopy = new File(configDir, "config/sui_ke/cherry/CherryCopy.cfg");
+        无中生有configFile = new File(configDir, "config/exnihilocreatio");
 
-        /*无中生有*/if (Examine.exnihilocreatioID) {ExNihiloCreatioExpand.expand();}
+        // 检查并加载无中生有（Ex Nihilo Creatio）扩展
+        if (Examine.exnihilocreatioID) {
+            ExNihiloCreatioExpand.expand();
+        }
     }
 
     public static void configRead() {
-        //检查配置文件
-        CreateConfigFile.config();
-        //读取配置文件
-        ConfigRead.config();
+        CreateConfigFile.config(); // 检查或创建配置文件
+        ConfigRead.config();       // 读取配置文件
     }
 
     public static void setBiomeID() {
-        //CreateConfigFile.setBiomeID();
+        // 预留方法（如需设置生物群系ID）
     }
 }
