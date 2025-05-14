@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "suikecherry:acacia_hanging_sign" },
+        "facing=south": { "model": "suikecherry:acacia_hanging_sign" },
+        "facing=east":  { "model": "suikecherry:acacia_hanging_sign", "y": 90 },
+        "facing=west":  { "model": "suikecherry:acacia_hanging_sign", "y": 90  }
+    }
+}

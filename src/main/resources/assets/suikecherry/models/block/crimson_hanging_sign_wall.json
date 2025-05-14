@@ -1,0 +1,7 @@
+{
+	"parent": "suikecherry:block/hanging_sign_wall",
+	"textures": {
+		"0": "suikecherry:entity/hanging_sign/crimson",
+		"particle": "suikecherry:blocks/crimson_stripped_stem"
+	}
+}
