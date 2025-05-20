@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=top,variant=oak": { "model": "suikecherry:cherry_planks" },
+        "half=bottom,variant=oak": { "model": "suikecherry:cherry_planks" }
+    }
+}
