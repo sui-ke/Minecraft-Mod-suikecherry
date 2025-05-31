@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "suikecherry:bamboo_hanging_sign_wall" },
+        "facing=south": { "model": "suikecherry:bamboo_hanging_sign_wall" },
+        "facing=east":  { "model": "suikecherry:bamboo_hanging_sign_wall", "y": 90 },
+        "facing=west":  { "model": "suikecherry:bamboo_hanging_sign_wall", "y": 90 }
+    }
+}

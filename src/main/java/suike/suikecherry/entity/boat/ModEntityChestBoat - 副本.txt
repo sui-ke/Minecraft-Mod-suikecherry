@@ -1,0 +1,321 @@
+package suike.suikecherry.entity.boat;
+
+import suike.suikecherry.SuiKe;
+import suike.suikecherry.sound.Sound;
+import suike.suikecherry.client.gui.GuiID;
+import suike.suikecherry.packet.PacketHandler;
+import suike.suikecherry.packet.ChestBoatUpdatePacket;
+
+import net.minecraft.init.Blocks;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
+import net.minecraft.world.IInteractionObject;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.item.EntityItem;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.nbt.NBTTagList;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.entity.IEntityMultiPart;
+import net.minecraft.entity.MultiPartEntityPart;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.Slot;
+import net.minecraft.inventory.Container;
+import net.minecraft.inventory.ContainerChest;
+import net.minecraft.inventory.InventoryBasic;
+
+import net.minecraftforge.common.util.Constants;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
+
+public abstract class ModEntityChestBoat extends ModEntityBoat implements IEntityMultiPart, IInteractionObject {
+    public final BoatChestPart chestPart;
+    public final ChestInventory chestInventory = new ChestInventory();
+
+    public ModEntityChestBoat(World world) {
+        super(world);
+        this.chestPart = new BoatChestPart(this);
+    }
+
+    @Override
+    protected void entityInit() {
+        super.entityInit();
+    }
+
+    @Override
+    public void writeEntityToNBT(NBTTagCompound compound) {
+        super.writeEntityToNBT(compound);
+        NBTTagCompound chestTag = new NBTTagCompound();
+        chestInventory.writeToNBT(chestTag);
+        compound.setTag("ChestItems", chestTag);
+    }
+
+    @Override
+    public void readEntityFromNBT(NBTTagCompound compound) {
+        super.readEntityFromNBT(compound);
+        if (compound.hasKey("ChestItems", Constants.NBT.TAG_COMPOUND)) {
+            // 将物品添加到箱子里
+            chestInventory.readFromNBT(compound.getCompoundTag("ChestItems"));
+        }
+        if (!world.isRemote) {
+            // 同步到附近玩家
+            this.chestInventory.syncChestContents();
+        }
+    }
+
+    @Override
+    public boolean processInitialInteract(EntityPlayer player, EnumHand hand) {
+        if (!world.isRemote && player.isSneaking()) {
+            if (this.chestInventory.canOpenChest && this.getPassengers().isEmpty()) {
+                player.openGui(SuiKe.instance, GuiID.GUI_CHEST_BOAT, world, getEntityId(), 0, 0);
+            }
+            return true;
+        }
+        return super.processInitialInteract(player, hand);
+    }
+
+    public void openContainerForPlayer(EntityPlayer player) {
+        if (!this.world.isRemote && this.chestInventory.canOpenChest) {
+            // 确保服务端创建容器
+            player.openGui(SuiKe.instance, GuiID.GUI_CHEST_BOAT, this.world, this.getEntityId(), 0, 0);
+        }
+    }
+
+    @Override
+    public void onUpdate() {
+        super.onUpdate();
+    }
+
+    @Override
+    public void setDead() {
+        if (!world.isRemote) {
+            chestInventory.dropAllChestInventory(); // 掉落库存
+        }
+        chestPart.setDead(); // 清除箱子实体
+        super.setDead();
+    }
+
+    @Override
+    public World getWorld() {
+        return this.world;
+    }
+
+    @Override
+    public Entity[] getParts() {
+        return new Entity[]{chestPart};
+    }
+
+    @Override
+    protected boolean canFitPassenger(Entity passenger) {
+        return this.getPassengers().size() == 0;
+    }
+
+    @Override
+    public boolean attackEntityFromPart(MultiPartEntityPart part, DamageSource source, float damage) {
+        return attackEntityFrom(source, damage);
+    }
+
+    @Override
+    public Container createContainer(InventoryPlayer playerInventory, EntityPlayer player) {
+        return new ContainerChestBoat(playerInventory, this.chestInventory, player);
+    }
+
+    @Override
+    public String getGuiID() {
+        return "suikecherry:chest_boat_gui";
+    }
+
+    @Override
+    public String getName() {
+        return chestInventory.getName();
+    }
+
+    @Override
+    public boolean hasCustomName() {
+        return chestInventory.hasCustomName();
+    }
+
+    // 驾驶员位置偏移
+    private static final float offset = 0.2F; // 固定向前偏移量
+    @Override
+    public void updatePassenger(Entity passenger) {
+        if (this.isPassenger(passenger)) {
+            float yOffset = (float) ((this.isDead ? 0.009999999776482582D : this.getMountedYOffset()) + passenger.getYOffset());
+
+            // 计算偏移后的位置
+            Vec3d vec3d = (new Vec3d((double)offset, 0.0D, 0.0D)).rotateYaw(-this.rotationYaw * 0.017453292F - ((float)Math.PI / 2F));
+            passenger.setPosition(this.posX + vec3d.x, this.posY + (double) yOffset, this.posZ + vec3d.z);
+
+            this.applyYawToEntity(passenger);
+        }
+    }
+
+// 箱子子实体
+    public class BoatChestPart extends MultiPartEntityPart {
+        public BoatChestPart(ModEntityChestBoat parentBoat) {
+            super(parentBoat, "chest", 0.775f, 0.775f);
+        }
+        /*
+        @Override
+        public boolean processInitialInteract(EntityPlayer player, EnumHand hand) {
+            if (!world.isRemote) {
+                ModEntityChestBoat.this.openChestGui(player);
+            }
+            return true;
+        }*/
+
+        @Override
+        public void onUpdate() {
+            super.onUpdate();
+
+            Vec3d offset = getChestOffset();
+            this.setPosition(posX + offset.x, posY + offset.y, posZ + offset.z);
+        }
+
+        public Vec3d getChestOffset() {
+            return new Vec3d(-0.375, ModEntityChestBoat.this.getMountedYOffset() + 0.28, 0)
+                .rotateYaw(-rotationYaw * 0.0175f - (float)Math.PI / 2);
+        }
+    }
+
+// 获取箱子容器及物品
+    public static class ContainerChestBoat extends ContainerChest {
+        private final ChestInventory chestInventory;
+
+        public ContainerChestBoat(IInventory playerInventory, ChestInventory chestInventory, EntityPlayer player) {
+            super(playerInventory, chestInventory, player);
+            this.chestInventory = chestInventory;
+            this.chestInventory.canOpenChest = false;
+        }
+
+        @Override
+        public ItemStack transferStackInSlot(EntityPlayer playerIn, int index) {
+            return super.transferStackInSlot(playerIn, index);
+        }
+
+        @Override
+        public boolean canInteractWith(EntityPlayer player) {
+            return true;
+        }
+
+        @Override
+        public void onContainerClosed(EntityPlayer player) {
+            super.onContainerClosed(player);
+            if (!player.world.isRemote) {
+                this.chestInventory.canOpenChest = true;
+            }
+            // 关闭时同步数据
+            this.chestInventory.chestMarkDirty();
+        }
+    }
+
+// 库存
+    public class ChestInventory extends InventoryBasic {
+        private boolean canOpenChest = true;
+
+        public ChestInventory() {
+            super(I18n.format("suikecherry.chest.boat.inventory"), false, 27);
+        }
+
+        public void writeToNBT(NBTTagCompound compound) {
+            NBTTagList list = new NBTTagList();
+            for (int i = 0; i < this.getSizeInventory(); ++i) {
+                ItemStack stack = this.getStackInSlot(i);
+                if (!stack.isEmpty()) {
+                    NBTTagCompound itemTag = new NBTTagCompound();
+                    itemTag.setByte("Slot", (byte)i);
+                    stack.writeToNBT(itemTag);
+                    list.appendTag(itemTag);
+                }
+            }
+            compound.setTag("Items", list);
+        }
+
+        public void readFromNBT(NBTTagCompound compound) {
+            NBTTagList list = compound.getTagList("Items", Constants.NBT.TAG_COMPOUND);
+            for (int i = 0; i < list.tagCount(); ++i) {
+                NBTTagCompound itemTag = list.getCompoundTagAt(i);
+                int slot = itemTag.getByte("Slot") & 255;
+                if (slot < this.getSizeInventory()) {
+                    this.setInventorySlotContents(slot, new ItemStack(itemTag));
+                }
+            }
+        }
+
+        public void chestMarkDirty() {
+            if (!world.isRemote) {
+                syncChestContents();
+            } else {
+                requestServerSync();
+            }
+        }
+
+        // 服务端同步方法
+        private void syncChestContents() {
+            NBTTagCompound nbt = new NBTTagCompound();
+            chestInventory.writeToNBT(nbt);
+            ItemStack syncStack = new ItemStack(Blocks.CHEST);
+            syncStack.setTagCompound(nbt);
+
+            // 发送给所有可见玩家
+            PacketHandler.INSTANCE.sendToAllTracking(
+                new ChestBoatUpdatePacket(getEntityId(), syncStack),
+                new NetworkRegistry.TargetPoint(world.provider.getDimension(), posX, posY, posZ, 64)
+            );
+        }
+
+        // 客户端请求方法
+        private void requestServerSync() {
+            NBTTagCompound nbt = new NBTTagCompound();
+            chestInventory.writeToNBT(nbt);
+            ItemStack requestStack = new ItemStack(Blocks.CHEST);
+            requestStack.setTagCompound(nbt);
+            
+            PacketHandler.INSTANCE.sendToServer(
+                new ChestBoatUpdatePacket(getEntityId(), requestStack)
+            );
+        }
+
+        // 包更新库存方法
+        public void updateChestVisuals(ItemStack stack) {
+            if (world.isRemote) {
+                chestInventory.readFromNBT(stack.getTagCompound());
+            }
+        }
+
+        // 服务端验证方法
+        public void validateAndUpdateContents(ItemStack stack) {
+            if (!world.isRemote) {
+                chestInventory.readFromNBT(stack.getTagCompound());
+                syncChestContents();
+            }
+        }
+
+        // 掉落库存物品
+        private void dropAllChestInventory() {
+            // 遍历所有库存槽位
+            for (int i = 0; i < chestInventory.getSizeInventory(); ++i) {
+                ItemStack stack = chestInventory.getStackInSlot(i);
+                if (!stack.isEmpty()) {
+                    // 生成掉落物实体
+                    world.spawnEntity(new EntityItem(world, posX, posY, posZ, stack));
+                }
+            }
+        }
+    }
+
+// 音效
+    /*private void playOpenSound() {
+        Sound.playSound(this.world, posX, posY, posZ, SoundEvents.BLOCK_CHEST_OPEN, 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
+    }
+
+    private void playCloseSound() {
+        Sound.playSound(this.world, posX, posY, posZ, SoundEvents.BLOCK_CHEST_CLOSE, 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
+    }*/
+}
