@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "hatch=0": { "model": "suikecherry:sniffer_egg_not_cracked" },
+        "hatch=1": { "model": "suikecherry:sniffer_egg_slightly_cracked" },
+        "hatch=2": { "model": "suikecherry:sniffer_egg_very_cracked" }
+    }
+}

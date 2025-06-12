@@ -1,0 +1,7 @@
+{
+	"parent": "suikecherry:block/sign_1",
+	"textures": {
+		"0": "suikecherry:entity/sign/warped",
+		"particle": "suikecherry:blocks/warped_stripped_stem"
+	}
+}

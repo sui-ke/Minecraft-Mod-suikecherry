@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "suikecherry:decorated_pot" },
+        "facing=south": { "model": "suikecherry:decorated_pot" },
+        "facing=east":  { "model": "suikecherry:decorated_pot" },
+        "facing=west":  { "model": "suikecherry:decorated_pot" }
+    }
+}

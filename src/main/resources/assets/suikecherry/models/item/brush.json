@@ -1,0 +1,18 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "suikecherry:items/brush"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [4, -17, 48],
+			"translation": [0, 3, 1],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [4, -17, -48],
+			"translation": [0, 3, 1],
+			"scale": [0.55, 0.55, 0.55]
+		}
+	}
+}

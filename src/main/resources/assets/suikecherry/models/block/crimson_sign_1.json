@@ -1,0 +1,7 @@
+{
+	"parent": "suikecherry:block/sign_1",
+	"textures": {
+		"0": "suikecherry:entity/sign/crimson",
+		"particle": "suikecherry:blocks/crimson_stripped_stem"
+	}
+}
