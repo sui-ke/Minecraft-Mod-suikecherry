@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=south": { "model": "suikecherry:birch_sign_wall" },
+        "facing=west":  { "model": "suikecherry:birch_sign_wall", "y": 90 },
+        "facing=north": { "model": "suikecherry:birch_sign_wall", "y": 180 },
+        "facing=east":  { "model": "suikecherry:birch_sign_wall", "y": 270 }
+    }
+}

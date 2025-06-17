@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "stage=0,type=cherry": { "model": "suikecherry:cherry_sapling" },
+        "stage=1,type=cherry": { "model": "suikecherry:cherry_sapling" }
+    }
+}

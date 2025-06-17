@@ -1,0 +1,7 @@
+{
+	"parent": "suikecherry:block/sign_wall",
+	"textures": {
+		"0": "suikecherry:entity/sign/cherry",
+		"particle": "suikecherry:blocks/cherry_planks"
+	}
+}

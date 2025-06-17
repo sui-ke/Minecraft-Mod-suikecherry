@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=top,type=cherry": { "model": "suikecherry:cherry_planks" },
+        "half=bottom,type=cherry": { "model": "suikecherry:cherry_planks" }
+    }
+}

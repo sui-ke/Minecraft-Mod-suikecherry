@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=top,type=cherry": { "model": "suikecherry:cherry_slab_top" },
+        "half=bottom,type=cherry": { "model": "suikecherry:cherry_slab" }
+    }
+}
