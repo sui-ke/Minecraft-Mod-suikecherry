@@ -1,0 +1,19 @@
+{
+    "required": false,
+    "minVersion": "0.8",
+    "compatibilityLevel": "JAVA_8",
+    "priority": 10000,
+    "package": "suike.suikecherry.mixin",
+    "refmap": "mixins.suikecherry.refmap.json",
+    "mixins": [
+        "LanternBlockMixin"
+    ],
+    "client": [
+        "RenderItemMixin",
+        "LayerArmorBaseMixin"
+    ],
+    "server": [],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

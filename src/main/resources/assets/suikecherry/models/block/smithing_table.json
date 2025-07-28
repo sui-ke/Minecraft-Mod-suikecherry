@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"down": "suikecherry:blocks/smithing_table_bottom",
+		"east": "suikecherry:blocks/smithing_table_side",
+		"north": "suikecherry:blocks/smithing_table_front",
+		"particle": "suikecherry:blocks/smithing_table_front",
+		"south": "suikecherry:blocks/smithing_table_front",
+		"up": "suikecherry:blocks/smithing_table_top",
+		"west": "suikecherry:blocks/smithing_table_side"
+	}
+}

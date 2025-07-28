@@ -1,0 +1,7 @@
+{
+	"parent": "suikecherry:block/hanging_sign",
+	"textures": {
+		"0": "suikecherry:entity/hanging_sign/cherry",
+		"particle": "suikecherry:blocks/cherry_stripped_log"
+	}
+}

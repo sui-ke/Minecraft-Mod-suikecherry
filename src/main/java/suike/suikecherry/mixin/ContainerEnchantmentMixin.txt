@@ -1,0 +1,90 @@
+/*
+package suike.suikecherry.mixin;
+
+import java.util.Random;
+
+import suike.suikecherry.SuiKe;
+import suike.suikecherry.block.ModBlockChiseledBookShelf;
+import suike.suikecherry.tileentity.ChiseledBookShelfTileEntity;
+
+import net.minecraft.block.Block;
+import net.minecraft.world.World;
+import net.minecraft.client.Minecraft;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.ContainerEnchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
+
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.gen.Accessor;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+@Mixin(ContainerEnchantment.class)
+public abstract class ContainerEnchantmentMixin {
+    @Inject(method = "onCraftMatrixChanged", at = @At("RETURN"))
+    private void onCraftMatrixChangedMixin(IInventory inventoryIn, CallbackInfo ci) {
+        System.out.println("调用 onCraftMatrixChanged 方法");
+    }
+}
+/*
+    @Accessor("rand") abstract Random getRandom();
+    @Accessor("position") abstract BlockPos getPos();
+    @Accessor("worldPointer") abstract World getWorld();
+    @Accessor("enchantLevels") abstract int[] getEnchantLevels();
+
+        if (this.getWorld().isRemote) return;
+
+        World world = this.getWorld();
+        BlockPos pos = this.getPos();
+
+        int bookAmount = 0;
+
+        // 遍历周围方块 (5x2x5区域)
+        for (int x = -2; x <= 2; x++) {
+            for (int y = 0; y <= 1; y++) {
+                for (int z = -2; z <= 2; z++) {
+                    if (x == 0 && y == 0 && z == 0) continue; // 跳过附魔台自身位置
+
+                    BlockPos checkPos = pos.add(x, y, z);
+                    Block block = world.getBlockState(checkPos).getBlock();
+
+                    // 检测方块是否是书架
+                    if (block instanceof ModBlockChiseledBookShelf) {
+                        ChiseledBookShelfTileEntity tile = (ChiseledBookShelfTileEntity) world.getTileEntity(checkPos);
+                        if (tile != null) {
+                            bookAmount += tile.getAllHasBookSlot().size(); // 获取书本数量
+                        }
+                    }
+                }
+            }
+        }
+
+        SuiKe.LOGGER.info("书本总数量: " + bookAmount);
+        SuiKe.LOGGER.info("等效书架: " + (bookAmount / 3));
+
+        // 修改附魔台等级
+        if (bookAmount > 0) {
+            for (int i = 0; i < this.getEnchantLevels().length; i++) {
+                if (this.getEnchantLevels()[i] > 0) {
+                    int bookShelves = bookAmount / 3;
+                    this.getEnchantLevels()[i] += calcCustomEnchantability(this.getRandom(), i, bookShelves);
+                }
+            }
+        }
+
+        for (int a : getEnchantLevels()) {
+            SuiKe.LOGGER.info("附魔台等级: " + a);
+        }
+
+    private static int calcCustomEnchantability(Random rand, int enchantNum, int customPower) {
+        int base = rand.nextInt(8) + 1 + (customPower >> 1) + rand.nextInt(customPower + 1);
+
+        switch(enchantNum) {
+            case 0: return Math.max(base / 3, 1);
+            case 1: return base * 2 / 3 + 1;
+            default: return Math.max(base, customPower * 2);
+        }
+    }
+*/
