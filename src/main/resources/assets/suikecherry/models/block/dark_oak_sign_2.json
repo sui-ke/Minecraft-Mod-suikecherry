@@ -1,0 +1,7 @@
+{
+	"parent": "suikecherry:block/sign_2",
+	"textures": {
+		"0": "suikecherry:entity/sign/dark_oak",
+		"particle": "blocks/planks_big_oak"
+	}
+}

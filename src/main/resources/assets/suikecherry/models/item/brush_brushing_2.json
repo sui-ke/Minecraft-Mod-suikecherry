@@ -1,0 +1,23 @@
+{
+	"parent": "suikecherry:item/brush",
+    "display": {
+		"firstperson_righthand": {
+			"rotation": [-86, -18, 52.5],
+			"translation": [0, 0, -4.25]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-86, -18, -55],
+			"translation": [0, 0, -4.25]	
+		},
+        "thirdperson_righthand": {
+          	"rotation": [ 0, 0, 90 ],
+          	"translation": [ -4, 2, 0 ],
+          	"scale": [ 0.9, 0.9, 0.9 ]
+        },
+        "thirdperson_lefthand": {
+          	"rotation": [ 0, 0, -90 ],
+          	"translation": [ 4, 2, 0 ],
+          	"scale": [ 0.9, 0.9, 0.9 ]
+        }
+    }
+}

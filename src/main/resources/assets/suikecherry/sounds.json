@@ -1,0 +1,800 @@
+{
+    "none": { "sounds": [ "suikecherry:none" ] },
+    "item.axe.strip": {
+        "sounds": [
+            "suikecherry:item/axe/strip1",
+            "suikecherry:item/axe/strip2",
+            "suikecherry:item/axe/strip3",
+            "suikecherry:item/axe/strip4"
+        ],
+        "subtitle": "subtitles.item.axe.strip"
+    },
+    "item.brush.brushing.generic": {
+        "sounds": [
+            "suikecherry:item/brush/brushing_generic1",
+            "suikecherry:item/brush/brushing_generic2",
+            "suikecherry:item/brush/brushing_generic3",
+            "suikecherry:item/brush/brushing_generic4"
+        ],
+        "subtitle": "subtitles.item.brush.brushing.generic"
+    },
+    "item.brush.brushing.sand": {
+        "sounds": [
+            "suikecherry:item/brush/brushing_sand1",
+            "suikecherry:item/brush/brushing_sand2",
+            "suikecherry:item/brush/brushing_sand3",
+            "suikecherry:item/brush/brushing_sand4"
+        ],
+        "subtitle": "subtitles.item.brush.brushing.sand"
+    },
+    "item.brush.brushing.gravel": {
+        "sounds": [
+            "suikecherry:item/brush/brushing_gravel1",
+            "suikecherry:item/brush/brushing_gravel2",
+            "suikecherry:item/brush/brushing_gravel3",
+            "suikecherry:item/brush/brushing_gravel4"
+        ],
+        "subtitle": "subtitles.item.brush.brushing.gravel"
+    },
+    "item.brush.brushing.sand.complete": {
+        "sounds": [
+            "suikecherry:item/brush/brushing_sand_complete1",
+            "suikecherry:item/brush/brushing_sand_complete2",
+            "suikecherry:item/brush/brushing_sand_complete3",
+            "suikecherry:item/brush/brushing_sand_complete4"
+        ],
+        "subtitle": "subtitles.item.brush.brushing.sand.complete"
+    },
+    "item.brush.brushing.gravel.complete": {
+        "sounds": [
+            "suikecherry:item/brush/brushing_gravel_complete1",
+            "suikecherry:item/brush/brushing_gravel_complete2",
+            "suikecherry:item/brush/brushing_gravel_complete3",
+            "suikecherry:item/brush/brushing_gravel_complete4"
+        ],
+        "subtitle": "subtitles.item.brush.brushing.gravel.complete"
+    },
+    "item.honeycomb.wax_on": {
+        "sounds": [
+            "suikecherry:item/honeycomb/wax_on1",
+            {
+                "name": "suikecherry:item/honeycomb/wax_on1",
+                "pitch": 0.9
+            },
+            {
+                "name": "suikecherry:item/honeycomb/wax_on1",
+                "pitch": 1.1
+            },
+            "suikecherry:item/honeycomb/wax_on2",
+            {
+                "name": "suikecherry:item/honeycomb/wax_on2",
+                "pitch": 0.9
+            },
+            {
+                "name": "suikecherry:item/honeycomb/wax_on2",
+                "pitch": 1.1
+            },
+            "suikecherry:item/honeycomb/wax_on3",
+            {
+                "name": "suikecherry:item/honeycomb/wax_on3",
+                "pitch": 0.9
+            },
+            {
+                "name": "suikecherry:item/honeycomb/wax_on3",
+                "pitch": 1.1
+            }
+        ],
+        "subtitle": "subtitles.item.honeycomb.wax_on"
+    },
+    "block.cherry_leaves.break": {
+        "sounds": [
+            "suikecherry:block/cherry_leaves/break1",
+            "suikecherry:block/cherry_leaves/break2",
+            "suikecherry:block/cherry_leaves/break3",
+            "suikecherry:block/cherry_leaves/break4",
+            "suikecherry:block/cherry_leaves/break5"
+        ],
+        "subtitle": "subtitles.block.generic.break"
+    },
+    "block.cherry_leaves.step": {
+        "sounds": [
+            "suikecherry:block/cherry_leaves/step1",
+            "suikecherry:block/cherry_leaves/step2",
+            "suikecherry:block/cherry_leaves/step3",
+            "suikecherry:block/cherry_leaves/step4",
+            "suikecherry:block/cherry_leaves/step5"
+        ],
+        "subtitle": "subtitles.block.generic.footsteps"
+    },
+    "block.cherry_leaves.place": {
+        "sounds": [
+            "suikecherry:block/cherry_leaves/break1",
+            "suikecherry:block/cherry_leaves/break2",
+            "suikecherry:block/cherry_leaves/break3",
+            "suikecherry:block/cherry_leaves/break4",
+            "suikecherry:block/cherry_leaves/break5"
+        ],
+        "subtitle": "subtitles.block.generic.place"
+    },
+    "block.cherry_leaves.hit": {
+        "sounds": [
+            "suikecherry:block/cherry_leaves/step1",
+            "suikecherry:block/cherry_leaves/step2",
+            "suikecherry:block/cherry_leaves/step3",
+            "suikecherry:block/cherry_leaves/step4",
+            "suikecherry:block/cherry_leaves/step5"
+        ],
+        "subtitle": "subtitles.block.generic.hit"
+    },
+    "block.cherry_leaves.fall": {
+        "sounds": [
+            "suikecherry:block/cherry_leaves/step1",
+            "suikecherry:block/cherry_leaves/step2",
+            "suikecherry:block/cherry_leaves/step3",
+            "suikecherry:block/cherry_leaves/step4",
+            "suikecherry:block/cherry_leaves/step5"
+        ],
+        "subtitle": "subtitles.entity.armor_stand.fall"
+    },
+    "block.cherry_wood.break": {
+        "sounds": [
+            "suikecherry:block/cherry_wood/break1",
+            "suikecherry:block/cherry_wood/break2",
+            "suikecherry:block/cherry_wood/break3",
+            "suikecherry:block/cherry_wood/break4",
+            "suikecherry:block/cherry_wood/break5"
+        ],
+        "subtitle": "subtitles.block.generic.break"
+    },
+    "block.cherry_wood.step": {
+        "sounds": [
+            "suikecherry:block/cherry_wood/step1",
+            "suikecherry:block/cherry_wood/step2",
+            "suikecherry:block/cherry_wood/step3",
+            "suikecherry:block/cherry_wood/step4",
+            "suikecherry:block/cherry_wood/step5",
+            "suikecherry:block/cherry_wood/step6"
+        ],
+        "subtitle": "subtitles.block.generic.footsteps"
+    },
+    "block.cherry_wood.place": {
+        "sounds": [
+            "suikecherry:block/cherry_wood/break1",
+            "suikecherry:block/cherry_wood/break2",
+            "suikecherry:block/cherry_wood/break3",
+            "suikecherry:block/cherry_wood/break4",
+            "suikecherry:block/cherry_wood/break5"
+        ],
+        "subtitle": "subtitles.block.generic.place"
+    },
+    "block.cherry_wood.hit": {
+        "sounds": [
+            "suikecherry:block/cherry_wood/step1",
+            "suikecherry:block/cherry_wood/step2",
+            "suikecherry:block/cherry_wood/step3",
+            "suikecherry:block/cherry_wood/step4",
+            "suikecherry:block/cherry_wood/step5",
+            "suikecherry:block/cherry_wood/step6"
+        ],
+        "subtitle": "subtitles.block.generic.hit"
+    },
+    "block.cherry_wood.fall": {
+        "sounds": [
+            "suikecherry:block/cherry_wood/step1",
+            "suikecherry:block/cherry_wood/step2",
+            "suikecherry:block/cherry_wood/step3",
+            "suikecherry:block/cherry_wood/step4",
+            "suikecherry:block/cherry_wood/step5",
+            "suikecherry:block/cherry_wood/step6"
+        ],
+        "subtitle": "subtitles.entity.armor_stand.fall"
+    },
+    "block.cherry_button.click": {
+        "sounds": [
+            "suikecherry:block/cherry_button/cherry_button_click"
+        ],
+        "subtitle": "subtitles.block.button.click"
+    },
+    "block.cherry_button.restore": {
+        "sounds": [
+            "suikecherry:block/cherry_button/cherry_button_restore"
+        ],
+        "subtitle": "subtitles.block.button.click"
+    },
+    "block.bamboo.break": {
+        "sounds": [
+        {
+            "name": "suikecherry:block/bamboo/place1",
+            "volume": 0.8
+        },
+        {
+            "name": "suikecherry:block/bamboo/place2",
+            "volume": 0.8
+        },
+        {
+            "name": "suikecherry:block/bamboo/place3",
+            "volume": 0.8
+        },
+        {
+            "name": "suikecherry:block/bamboo/place4",
+            "volume": 0.8
+        },
+        {
+            "name": "suikecherry:block/bamboo/place5",
+            "volume": 0.8
+        },
+        {
+            "name": "suikecherry:block/bamboo/place6",
+            "volume": 0.8
+        }
+        ],
+        "subtitle": "subtitles.block.generic.break"
+    },
+    "block.bamboo.fall": {
+        "sounds": [
+            "suikecherry:block/bamboo/step1",
+            "suikecherry:block/bamboo/step2",
+            "suikecherry:block/bamboo/step3",
+            "suikecherry:block/bamboo/step4",
+            "suikecherry:block/bamboo/step5",
+            "suikecherry:block/bamboo/step6"
+        ],
+        "subtitle": "subtitles.entity.armor_stand.fall"
+    },
+    "block.bamboo.hit": {
+        "sounds": [
+            "suikecherry:block/bamboo/step1",
+            "suikecherry:block/bamboo/step2",
+            "suikecherry:block/bamboo/step3",
+            "suikecherry:block/bamboo/step4",
+            "suikecherry:block/bamboo/step5",
+            "suikecherry:block/bamboo/step6"
+        ],
+        "subtitle": "subtitles.block.generic.hit"
+    },
+    "block.bamboo.place": {
+        "sounds": [
+            {
+                "name": "suikecherry:block/bamboo/place1",
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/bamboo/place2",
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/bamboo/place3",
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/bamboo/place4",
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/bamboo/place5",
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/bamboo/place6",
+                "volume": 0.8
+            }
+        ],
+        "subtitle": "subtitles.block.generic.place"
+    },
+    "block.bamboo.step": {
+        "sounds": [
+            "suikecherry:block/bamboo/step1",
+            {
+                "name": "suikecherry:block/bamboo/step2",
+                "pitch": 0.7
+            },
+            "suikecherry:block/bamboo/step3",
+            {
+                "name": "suikecherry:block/bamboo/step4",
+                "pitch": 0.7
+            },
+            "suikecherry:block/bamboo/step5",
+            "suikecherry:block/bamboo/step6"
+        ],
+        "subtitle": "subtitles.block.generic.footsteps"
+    },
+    "block.suspicious_sand.break": {
+        "sounds": [
+            "suikecherry:block/suspicious_sand/break1",
+            "suikecherry:block/suspicious_sand/break2",
+            "suikecherry:block/suspicious_sand/break3",
+            "suikecherry:block/suspicious_sand/break4",
+            "suikecherry:block/suspicious_sand/break5",
+            "suikecherry:block/suspicious_sand/break6"
+        ],
+        "subtitle": "subtitles.block.generic.break"
+    },
+    "block.suspicious_sand.fall": {
+        "sounds": [
+            "suikecherry:block/suspicious_sand/step1",
+            "suikecherry:block/suspicious_sand/step2",
+            "suikecherry:block/suspicious_sand/step3",
+            "suikecherry:block/suspicious_sand/step4",
+            "suikecherry:block/suspicious_sand/step5"
+        ]
+    },
+    "block.suspicious_sand.hit": {
+        "sounds": [
+            "suikecherry:block/suspicious_sand/step1",
+            "suikecherry:block/suspicious_sand/step2",
+            "suikecherry:block/suspicious_sand/step3",
+            "suikecherry:block/suspicious_sand/step4",
+            "suikecherry:block/suspicious_sand/step5"
+        ],
+        "subtitle": "subtitles.block.generic.hit"
+    },
+    "block.suspicious_sand.place": {
+        "sounds": [
+            "suikecherry:block/suspicious_sand/place1",
+            "suikecherry:block/suspicious_sand/place2",
+            "suikecherry:block/suspicious_sand/place3",
+            "suikecherry:block/suspicious_sand/place4",
+            "suikecherry:block/suspicious_sand/place5"
+        ],
+        "subtitle": "subtitles.block.generic.place"
+    },
+    "block.suspicious_sand.step": {
+        "sounds": [
+            "suikecherry:block/suspicious_sand/step1",
+            "suikecherry:block/suspicious_sand/step2",
+            "suikecherry:block/suspicious_sand/step3",
+            "suikecherry:block/suspicious_sand/step4",
+            "suikecherry:block/suspicious_sand/step5"
+        ],
+        "subtitle": "subtitles.block.generic.footsteps"
+    },
+    "block.suspicious_gravel.break": {
+        "sounds": [
+            "suikecherry:block/suspicious_gravel/break1",
+            "suikecherry:block/suspicious_gravel/break2",
+            "suikecherry:block/suspicious_gravel/break3",
+            "suikecherry:block/suspicious_gravel/break4",
+            "suikecherry:block/suspicious_gravel/break5",
+            "suikecherry:block/suspicious_gravel/break6"
+        ],
+        "subtitle": "subtitles.block.generic.break"
+    },
+    "block.suspicious_gravel.fall": {
+        "sounds": [
+            "suikecherry:block/suspicious_gravel/step1",
+            "suikecherry:block/suspicious_gravel/step2",
+            "suikecherry:block/suspicious_gravel/step3",
+            "suikecherry:block/suspicious_gravel/step4"
+        ]
+    },
+    "block.suspicious_gravel.hit": {
+        "sounds": [
+            "suikecherry:block/suspicious_gravel/step1",
+            "suikecherry:block/suspicious_gravel/step2",
+            "suikecherry:block/suspicious_gravel/step3",
+            "suikecherry:block/suspicious_gravel/step4"
+        ],
+        "subtitle": "subtitles.block.generic.hit"
+    },
+    "block.suspicious_gravel.place": {
+        "sounds": [
+            "suikecherry:block/suspicious_gravel/place1",
+            "suikecherry:block/suspicious_gravel/place2",
+            "suikecherry:block/suspicious_gravel/place3",
+            "suikecherry:block/suspicious_gravel/place4"
+        ],
+        "subtitle": "subtitles.block.generic.place"
+    },
+    "block.suspicious_gravel.step": {
+        "sounds": [
+            "suikecherry:block/suspicious_gravel/step1",
+            "suikecherry:block/suspicious_gravel/step2",
+            "suikecherry:block/suspicious_gravel/step3",
+            "suikecherry:block/suspicious_gravel/step4"
+        ],
+        "subtitle": "subtitles.block.generic.footsteps"
+    },
+    "block.decorated_pot.break": {
+        "sounds": [
+            "suikecherry:block/decorated_pot/break1",
+            "suikecherry:block/decorated_pot/break2",
+            "suikecherry:block/decorated_pot/break3",
+            "suikecherry:block/decorated_pot/break4"
+        ],
+    "subtitle": "subtitles.block.generic.break"
+    },
+    "block.decorated_pot.fall": {
+        "sounds": [
+            "suikecherry:block/decorated_pot/step1",
+            "suikecherry:block/decorated_pot/step2",
+            "suikecherry:block/decorated_pot/step3",
+            "suikecherry:block/decorated_pot/step4",
+            "suikecherry:block/decorated_pot/step5"
+        ],
+    "subtitle": "subtitles.block.generic.fall"
+    },
+    "block.decorated_pot.hit": {
+        "sounds": [
+            "suikecherry:block/decorated_pot/step1",
+            "suikecherry:block/decorated_pot/step2",
+            "suikecherry:block/decorated_pot/step3",
+            "suikecherry:block/decorated_pot/step4",
+            "suikecherry:block/decorated_pot/step5"
+        ],
+    "subtitle": "subtitles.block.generic.hit"
+    },
+    "block.decorated_pot.place": {
+        "sounds": [
+            "suikecherry:block/decorated_pot/break1",
+            "suikecherry:block/decorated_pot/break2",
+            "suikecherry:block/decorated_pot/break3",
+            "suikecherry:block/decorated_pot/break4"
+        ],
+    "subtitle": "subtitles.block.generic.place"
+    },
+    "block.decorated_pot.step": {
+        "sounds": [
+            "suikecherry:block/decorated_pot/step1",
+            "suikecherry:block/decorated_pot/step2",
+            "suikecherry:block/decorated_pot/step3",
+            "suikecherry:block/decorated_pot/step4",
+            "suikecherry:block/decorated_pot/step5"
+        ],
+    "subtitle": "subtitles.block.generic.footsteps"
+    },
+    "block.decorated_pot.shatter": {
+        "sounds": [
+            "suikecherry:block/decorated_pot/shatter1",
+            "suikecherry:block/decorated_pot/shatter2",
+            "suikecherry:block/decorated_pot/shatter3",
+            "suikecherry:block/decorated_pot/shatter4",
+            "suikecherry:block/decorated_pot/shatter5"
+        ],
+    "subtitle": "subtitles.block.decorated_pot.shatter"
+    },
+    "block.decorated_pot.insert": {
+        "sounds": [
+            "suikecherry:block/decorated_pot/insert1",
+            "suikecherry:block/decorated_pot/insert2",
+            "suikecherry:block/decorated_pot/insert3",
+            "suikecherry:block/decorated_pot/insert4"
+        ],
+    "subtitle": "subtitles.block.decorated_pot.insert"
+    },
+    "block.decorated_pot.insert_fail": {
+        "sounds": [
+            "suikecherry:block/decorated_pot/insert_fail1",
+            "suikecherry:block/decorated_pot/insert_fail2",
+            "suikecherry:block/decorated_pot/insert_fail3",
+            "suikecherry:block/decorated_pot/insert_fail4",
+            "suikecherry:block/decorated_pot/insert_fail5"
+        ],
+    "subtitle": "subtitles.block.decorated_pot.insert_fail"
+    },
+    "block.chiseled_bookshelf.break": {
+      "sounds": [
+            "suikecherry:block/chiseled_bookshelf/break1",
+            "suikecherry:block/chiseled_bookshelf/break2",
+            "suikecherry:block/chiseled_bookshelf/break3",
+            "suikecherry:block/chiseled_bookshelf/break4",
+            "suikecherry:block/chiseled_bookshelf/break5",
+            "suikecherry:block/chiseled_bookshelf/break6"
+      ],
+      "subtitle": "subtitles.block.generic.break"
+    },
+    "block.chiseled_bookshelf.fall": {
+      "sounds": [
+            "suikecherry:block/chiseled_bookshelf/step1",
+            "suikecherry:block/chiseled_bookshelf/step2",
+            "suikecherry:block/chiseled_bookshelf/step3",
+            "suikecherry:block/chiseled_bookshelf/step4",
+            "suikecherry:block/chiseled_bookshelf/step5"
+      ]
+    },
+    "block.chiseled_bookshelf.hit": {
+      "sounds": [
+            "suikecherry:block/chiseled_bookshelf/step1",
+            "suikecherry:block/chiseled_bookshelf/step2",
+            "suikecherry:block/chiseled_bookshelf/step3",
+            "suikecherry:block/chiseled_bookshelf/step4",
+            "suikecherry:block/chiseled_bookshelf/step5"
+      ],
+      "subtitle": "subtitles.block.generic.hit"
+    },
+    "block.chiseled_bookshelf.place": {
+        "sounds": [
+            "suikecherry:block/chiseled_bookshelf/break1",
+            "suikecherry:block/chiseled_bookshelf/break2",
+            "suikecherry:block/chiseled_bookshelf/break3",
+            "suikecherry:block/chiseled_bookshelf/break4",
+            "suikecherry:block/chiseled_bookshelf/break5",
+            "suikecherry:block/chiseled_bookshelf/break6"
+        ],
+        "subtitle": "subtitles.block.generic.place"
+    },
+    "block.chiseled_bookshelf.step": {
+        "sounds": [
+            "suikecherry:block/chiseled_bookshelf/step1",
+            "suikecherry:block/chiseled_bookshelf/step2",
+            "suikecherry:block/chiseled_bookshelf/step3",
+            "suikecherry:block/chiseled_bookshelf/step4",
+            "suikecherry:block/chiseled_bookshelf/step5"
+        ],
+        "subtitle": "subtitles.block.generic.footsteps"
+    },
+    "block.chiseled_bookshelf.insert": {
+        "sounds": [
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/insert1",
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/insert1",
+                "pitch": 0.85,
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/insert1",
+                "pitch": 1.1,
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/insert2",
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/insert2",
+                "pitch": 0.85,
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/insert2",
+                "pitch": 1.1,
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/insert3",
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/insert3",
+                "pitch": 0.85,
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/insert3",
+                "pitch": 1.1,
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/insert4",
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/insert4",
+                "pitch": 0.85,
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/insert4",
+                "pitch": 1.1,
+                "volume": 0.8
+            }
+        ],
+        "subtitle": "subtitles.chiseled_bookshelf.insert"
+    },
+    "block.chiseled_bookshelf.pickup": {
+        "sounds": [
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/pickup1",
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/pickup1",
+                "pitch": 0.8,
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/pickup1",
+                "pitch": 1.1,
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/pickup2",
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/pickup2",
+                "pitch": 0.8,
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/pickup2",
+                "pitch": 1.1,
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/pickup3",
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/pickup3",
+                "pitch": 0.8,
+                "volume": 0.8
+            },
+            {
+                "name": "suikecherry:block/chiseled_bookshelf/pickup3",
+                "pitch": 1.1,
+                "volume": 0.8
+            }
+        ],
+        "subtitle": "subtitles.chiseled_bookshelf.take"
+    },
+    "block.smithing_table": {
+        "sounds": [
+            "suikecherry:block/smithing_table/smithing_table1",
+            "suikecherry:block/smithing_table/smithing_table2",
+            "suikecherry:block/smithing_table/smithing_table3"
+        ],
+        "subtitle": "subtitles.block.smithing_table.use"
+    },
+    "entity.sniffer.egg_hatch": {
+        "sounds": [
+            "suikecherry:entity/sniffer/egg/egg_hatch1",
+            "suikecherry:entity/sniffer/egg/egg_hatch2"
+        ],
+        "subtitle": "subtitles.entity.sniffer.egg_hatch"
+    },
+    "entity.sniffer.egg_crack": {
+        "sounds": [
+            "suikecherry:entity/sniffer/egg/egg_crack1",
+            "suikecherry:entity/sniffer/egg/egg_crack2",
+            "suikecherry:entity/sniffer/egg/egg_crack3",
+            "suikecherry:entity/sniffer/egg/egg_crack4",
+            "suikecherry:entity/sniffer/egg/egg_crack5"
+        ],
+        "subtitle": "subtitles.entity.sniffer.egg_crack"
+    },
+    "entity.sniffer.death": {
+        "sounds": [
+            "suikecherry:entity/sniffer/death1",
+            "suikecherry:entity/sniffer/death2"
+        ],
+        "subtitle": "subtitles.entity.sniffer.death"
+    },
+    "entity.sniffer.digging": {
+        "sounds": [
+            "suikecherry:entity/sniffer/longdig1",
+            "suikecherry:entity/sniffer/longdig2"
+        ],
+        "subtitle": "subtitles.entity.sniffer.digging"
+    },
+    "entity.sniffer.digging_stop": {
+        "sounds": [
+            "suikecherry:entity/sniffer/digging_stop1",
+            "suikecherry:entity/sniffer/digging_stop2"
+        ],
+        "subtitle": "subtitles.entity.sniffer.digging_stop"
+    },
+    "entity.sniffer.eat": {
+      "sounds": [
+        {
+            "name": "suikecherry:entity/sniffer/eat1",
+            "volume": 0.7
+        },
+        {
+            "name": "suikecherry:entity/sniffer/eat2",
+            "volume": 0.7
+        },
+        {
+            "name": "suikecherry:entity/sniffer/eat3",
+            "volume": 0.7
+        }
+      ],
+      "subtitle": "subtitles.entity.sniffer.eat"
+    },
+    "entity.sniffer.happy": {
+        "sounds": [
+            "suikecherry:entity/sniffer/happy1",
+            "suikecherry:entity/sniffer/happy2",
+            "suikecherry:entity/sniffer/happy3",
+            "suikecherry:entity/sniffer/happy4",
+            "suikecherry:entity/sniffer/happy5"
+        ],
+      "subtitle": "subtitles.entity.sniffer.happy"
+    },
+    "entity.sniffer.hurt": {
+        "sounds": [
+            "suikecherry:entity/sniffer/hurt1",
+            "suikecherry:entity/sniffer/hurt2",
+            "suikecherry:entity/sniffer/hurt3"
+        ],
+      "subtitle": "subtitles.entity.sniffer.hurt"
+    },
+    "entity.sniffer.idle": {
+        "sounds": [
+            "suikecherry:entity/sniffer/idle1",
+            "suikecherry:entity/sniffer/idle2",
+            "suikecherry:entity/sniffer/idle3",
+            "suikecherry:entity/sniffer/idle4",
+            "suikecherry:entity/sniffer/idle5",
+            "suikecherry:entity/sniffer/idle6",
+            "suikecherry:entity/sniffer/idle7",
+            "suikecherry:entity/sniffer/idle8",
+            "suikecherry:entity/sniffer/idle9",
+            "suikecherry:entity/sniffer/idle10",
+            "suikecherry:entity/sniffer/idle11"
+        ],
+        "subtitle": "subtitles.entity.sniffer.idle"
+    },
+    "entity.sniffer.scenting": {
+        "sounds": [
+            "suikecherry:entity/sniffer/scenting1",
+            "suikecherry:entity/sniffer/scenting2",
+            "suikecherry:entity/sniffer/scenting3"
+        ],
+        "subtitle": "subtitles.entity.sniffer.scenting"
+    },
+    "entity.sniffer.searching": {
+        "sounds": [
+            "suikecherry:entity/sniffer/searching1",
+            {
+                "name": "suikecherry:entity/sniffer/searching1",
+                "volume": 0.8
+            },
+            "suikecherry:entity/sniffer/searching2",
+            {
+                "name": "suikecherry:entity/sniffer/searching2",
+                "volume": 0.8
+            },
+            "suikecherry:entity/sniffer/searching3",
+            {
+                "name": "suikecherry:entity/sniffer/searching3",
+                "volume": 0.8
+            },
+            "suikecherry:entity/sniffer/searching4",
+            {
+                "name": "suikecherry:entity/sniffer/searching4",
+                "volume": 0.8
+            },
+            "suikecherry:entity/sniffer/searching5",
+            {
+                "name": "suikecherry:entity/sniffer/searching5",
+                "volume": 0.8
+            },
+            "suikecherry:entity/sniffer/searching6",
+            {
+                "name": "suikecherry:entity/sniffer/searching6",
+                "volume": 0.8
+            }
+        ],
+        "subtitle": "subtitles.entity.sniffer.searching"
+    },
+    "entity.sniffer.sniffing": {
+        "sounds": [
+            "suikecherry:entity/sniffer/sniffing1",
+            "suikecherry:entity/sniffer/sniffing2",
+            "suikecherry:entity/sniffer/sniffing3"
+        ],
+        "subtitle": "subtitles.entity.sniffer.sniffing"
+    },
+    "entity.sniffer.step": {
+        "sounds": [
+            "suikecherry:entity/sniffer/step1",
+            "suikecherry:entity/sniffer/step2",
+            "suikecherry:entity/sniffer/step3",
+            "suikecherry:entity/sniffer/step4",
+            "suikecherry:entity/sniffer/step5",
+            "suikecherry:entity/sniffer/step6"
+        ],
+        "subtitle": "subtitles.entity.sniffer.step"
+    },
+    "music_disc.relic": {
+        "sounds": [
+            {
+                "name": "suikecherry:records/relic",
+                "stream": true
+            }
+        ]
+    }
+}

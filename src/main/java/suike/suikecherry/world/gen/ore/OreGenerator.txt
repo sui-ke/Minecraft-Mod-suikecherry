@@ -1,0 +1,149 @@
+package suike.suikecherry.world.gen.ore;
+
+import java.util.List;
+import java.util.Random;
+import java.util.ArrayList;
+
+import suike.suikecherry.block.BlockBase;
+
+import net.minecraft.init.Blocks;
+import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.world.World;
+import net.minecraft.world.gen.IChunkGenerator;
+import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.BlockPos;
+
+import net.minecraftforge.fml.common.IWorldGenerator;
+
+public class OreGenerator implements IWorldGenerator {
+    // 矿石列表
+    private final List<OreGen> oreGens = new ArrayList<>();
+
+    public OreGenerator() {
+        // 将需要生成的矿石添加到列表
+        oreGens.add(new OreGen(BlockBase.DECORATED_POT, 30, 6));
+        oreGens.add(new OreGen(BlockBase.CHERRY_SIGN, 20, 8));
+        oreGens.add(new OreGen(BlockBase.CHERRY_SIGN_WALL, 10, 4));
+    }
+
+    @Override
+    public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
+        // 仅生成在主世界
+        if (world.provider.getDimension() == 0) {
+            BlockPos pos = new BlockPos(chunkX << 4, 0, chunkZ << 4);
+
+            // 生成随机因子
+            long baseSeed = world.getSeed() + pos.toLong();
+            long chunkSeed = (long) chunkX * 341873128712L + (long) chunkZ * 132897987541L;
+            Random oreRandom = new Random(baseSeed ^ chunkSeed);
+
+            // 遍历生成列表所有矿石
+            for (int i = 0; i < oreGens.size(); i++) {
+                oreGens.get(i).gen(world, pos, oreRandom);
+                oreRandom.setSeed(oreRandom.nextLong() ^ (i * 987654321L)); // 更新随机因子
+            }
+        }
+    }
+
+// 矿石生成器
+    private class OreGen {
+        private final IBlockState oreBlock; // 矿石
+        private final int veinsPerChunk;    // 尝试生成次数
+        private final int minSize;          // 基础数量
+        private final int maxSize;          // 矿脉大小 (最大生成数量)
+        private final Integer richHeight;   // 富集高度 (可为null表示无富集区域)
+        private final int richRange = 10;   // 富集区域范围
+        private final int minHeight;        // 最小高度
+        private final int maxHeight;        // 最大高度
+
+        public OreGen(Block block, int veinsPerChunk, int maxSize) {
+            this(block, veinsPerChunk, 1, maxSize);
+        }
+        public OreGen(Block block, int veinsPerChunk, int minSize, int maxSize) {
+            this(block, veinsPerChunk, minSize, maxSize, null);
+        }
+        public OreGen(Block block, int veinsPerChunk, int minSize, int maxSize, Integer richHeight) {
+            this(block, veinsPerChunk, minSize, maxSize, richHeight, 30, 140);
+        }
+        public OreGen(Block block, int veinsPerChunk, int minSize, int maxSize, Integer richHeight, int minHeight, int maxHeight) {
+            this.oreBlock = block.getDefaultState();
+            this.veinsPerChunk = veinsPerChunk;
+            this.minSize = minSize;
+            this.maxSize = maxSize;
+            this.richHeight = richHeight;
+            this.minHeight = minHeight;
+            this.maxHeight = maxHeight;
+        }
+
+        public void gen(World world, BlockPos pos, Random random) {
+            // 获取世界坐标
+            int baseX = pos.getX();
+            int baseZ = pos.getZ();
+
+            for (int i = 0; i < veinsPerChunk; i++) {
+                // 生成随机坐标
+                int x = baseX + random.nextInt(16);
+                int z = baseZ + random.nextInt(16);
+                int y = this.getRandomHeight(random);
+                BlockPos genPos = new BlockPos(x, y, z);
+
+                // 坐标验证
+                if (!this.isValidPosition(world, genPos)) continue;
+
+                // 矿石生成
+                this.generateOreVein(world, random, genPos);
+            }
+        }
+
+        // 获取生成高度
+        private int getRandomHeight(Random random) {
+            if (richHeight != null && random.nextFloat() < 0.6f) { // 60%概率生成在富集区域
+                int richMin = Math.max(minHeight, richHeight - richRange);
+                int richMax = Math.min(maxHeight, richHeight + richRange);
+                return richMin + random.nextInt(richMax - richMin + 1);
+            }
+            return minHeight + random.nextInt(maxHeight - minHeight + 1);
+        }
+
+        private boolean isValidPosition(World world, BlockPos pos) {
+            // 基础高度检查
+            if (pos.getY() < 1 || pos.getY() > 255) return false;
+
+            // 目标不为可替换方块
+            if (!this.canReplaceableStone(world.getBlockState(pos))) {
+                return false;
+            }
+
+            return true;
+        }
+
+        private void generateOreVein(World world, Random random, BlockPos pos) {
+            // 第一个矿石直接放置在 pos
+            world.setBlockState(pos, this.oreBlock, 2);
+
+            // 随机生成更多矿石数量 (Max: this.maxSize)
+            int oreCount = random.nextInt(this.maxSize) + (minSize - 1);
+
+            // 通过随机 EnumFacing 放置
+            BlockPos targetPos = pos;
+            for (int i = 1; i < oreCount; i++) {
+                EnumFacing direction = EnumFacing.random(random);
+                targetPos = targetPos.offset(direction);
+                if (this.canReplaceableStone(world.getBlockState(targetPos))) {
+                    world.setBlockState(targetPos, this.oreBlock, 2);
+                }
+            }
+        }
+
+        private boolean canReplaceableStone(IBlockState state) {
+            Block block = state.getBlock();
+            return block == Blocks.STONE ||
+                    block == Blocks.STONE.getStateFromMeta(1).getBlock() || // 花岗岩 // 必须都检查不然三废石替换失效
+                    block == Blocks.STONE.getStateFromMeta(3).getBlock() || // 闪长岩
+                    block == Blocks.STONE.getStateFromMeta(4).getBlock() || // 安山岩
+                    block == Blocks.GRAVEL;
+        }
+    }
+}

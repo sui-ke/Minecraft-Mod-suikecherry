@@ -1,0 +1,66 @@
+package suike.suikecherry.data;
+
+import java.util.Map;
+
+import suike.suikecherry.SuiKe;
+import suike.suikecherry.sound.ModSoundType;
+
+import net.minecraft.item.EnumDyeColor;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.MapColor;
+import net.minecraft.util.ResourceLocation;
+
+import com.google.common.collect.ImmutableMap;
+
+public enum BlockTypeData {
+    NONE("none", null, SoundType.WOOD, SoundType.PLANT),
+    Cherry("cherry", MapColor.getBlockColor(EnumDyeColor.PINK), ModSoundType.cherryWood, ModSoundType.cherryLeaves, new ResourceLocation("suikecherry", "block.cherry_wood.place")),
+    Bamboo("bamboo", null, ModSoundType.bamboo, null, new ResourceLocation("suikecherry", "block.bamboo.place")),
+    Crimson("crimson", null, ModSoundType.stem, null, new ResourceLocation("nb", "block.stem.step"));
+
+    private static final Map<String, BlockTypeData> EnumType_Map = ImmutableMap.<String, BlockTypeData>builder()
+        .put(Cherry.name, Cherry)
+        .put(Bamboo.name, Bamboo)
+        .put(Crimson.name, Crimson)
+        .put("warped", Crimson)
+        .build();
+
+    private final String name;           // 类型名
+    private final MapColor mapColor;     // 地图颜色
+    private final SoundType woodSound;   // 木板声音
+    private final SoundType leavesSound; // 树叶声音
+    private final ResourceLocation placeSoundRes; // 放置声音 Res
+
+    private EnumType(String name, MapColor mapColor, SoundType woodSound, SoundType leavesSound) {
+        this(name, mapColor, woodSound, leavesSound, null);
+    }
+    private EnumType(String name, MapColor mapColor, SoundType woodSound, SoundType leavesSound, ResourceLocation placeSoundRes) {
+        this.name = name;
+        this.mapColor = mapColor;
+        this.woodSound = woodSound;
+        this.leavesSound = leavesSound;
+        this.placeSoundRes = placeSoundRes != null
+            ? placeSoundRes
+            : new ResourceLocation("block.wood.place");
+    }
+
+    public MapColor getMapColor() {
+        return this.mapColor;
+    }
+
+    public SoundType getWoodSound() {
+        return this.woodSound;
+    }
+
+    public SoundType getLeavesSound() {
+        return this.leavesSound;
+    }
+
+    public ResourceLocation getPlaceSound() {
+        return this.placeSoundRes;
+    }
+
+    public static BlockTypeData getEnumType(String name) {
+        return EnumType_Map.getOrDefault(name.replaceFirst("_.*", ""), BlockTypeData.NONE);
+    }
+}

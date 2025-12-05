@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "axis=0":  { "model": "suikecherry:warped_hanging_sign_attached_1" },
+        "axis=1":  { "model": "suikecherry:warped_hanging_sign_attached_2" },
+        "axis=2":  { "model": "suikecherry:warped_hanging_sign_attached_3" },
+        "axis=3":  { "model": "suikecherry:warped_hanging_sign_attached_4" },
+        "axis=4":  { "model": "suikecherry:warped_hanging_sign_attached_1", "y": 90 },
+        "axis=5":  { "model": "suikecherry:warped_hanging_sign_attached_2", "y": 90 },
+        "axis=6":  { "model": "suikecherry:warped_hanging_sign_attached_3", "y": 90 },
+        "axis=7":  { "model": "suikecherry:warped_hanging_sign_attached_4", "y": 90 },
+        "axis=8":  { "model": "suikecherry:warped_hanging_sign_attached_1", "y": 180 },
+        "axis=9":  { "model": "suikecherry:warped_hanging_sign_attached_2", "y": 180 },
+        "axis=10": { "model": "suikecherry:warped_hanging_sign_attached_3", "y": 180 },
+        "axis=11": { "model": "suikecherry:warped_hanging_sign_attached_4", "y": 180 },
+        "axis=12": { "model": "suikecherry:warped_hanging_sign_attached_1", "y": 270 },
+        "axis=13": { "model": "suikecherry:warped_hanging_sign_attached_2", "y": 270 },
+        "axis=14": { "model": "suikecherry:warped_hanging_sign_attached_3", "y": 270 },
+        "axis=15": { "model": "suikecherry:warped_hanging_sign_attached_4", "y": 270 }
+    }
+}

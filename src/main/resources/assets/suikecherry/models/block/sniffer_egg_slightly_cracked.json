@@ -1,0 +1,11 @@
+{
+    "parent": "suikecherry:block/sniffer_egg",
+    "textures": {
+        "bottom": "suikecherry:blocks/sniffer_egg/sniffer_egg_slightly_cracked_bottom",
+        "east": "suikecherry:blocks/sniffer_egg/sniffer_egg_slightly_cracked_east",
+        "north": "suikecherry:blocks/sniffer_egg/sniffer_egg_slightly_cracked_north",
+        "south": "suikecherry:blocks/sniffer_egg/sniffer_egg_slightly_cracked_south",
+        "top": "suikecherry:blocks/sniffer_egg/sniffer_egg_slightly_cracked_top",
+        "west": "suikecherry:blocks/sniffer_egg/sniffer_egg_slightly_cracked_west"
+    }
+}

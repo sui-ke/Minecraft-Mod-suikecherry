@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "suikecherry:warped_hanging_sign" },
+        "facing=south": { "model": "suikecherry:warped_hanging_sign" },
+        "facing=east":  { "model": "suikecherry:warped_hanging_sign", "y": 90 },
+        "facing=west":  { "model": "suikecherry:warped_hanging_sign", "y": 90  }
+    }
+}

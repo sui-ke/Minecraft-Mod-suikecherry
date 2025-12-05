@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=south": { "model": "suikecherry:chiseled_bookshelf" },
+        "facing=west":  { "model": "suikecherry:chiseled_bookshelf", "y": 90 },
+        "facing=north": { "model": "suikecherry:chiseled_bookshelf", "y": 180 },
+        "facing=east":  { "model": "suikecherry:chiseled_bookshelf", "y": 270 }
+    }
+}

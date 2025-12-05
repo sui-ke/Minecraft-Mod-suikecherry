@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "suikecherry:blocks/cherry_planks",
+    "top": "suikecherry:blocks/cherry_planks",
+    "side": "suikecherry:blocks/cherry_planks"
+  }
+}
